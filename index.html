@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendGo - Login</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to SendGo</h1>
+        <div id="login-section">
+            <input type="text" id="login-id" placeholder="Enter send.go ID">
+            <input type="password" id="login-pin" placeholder="Enter PIN">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="register-section">
+            <h3>Create New SendGo ID</h3>
+            <input type="text" id="reg-name" placeholder="Enter your name">
+            <input type="text" id="reg-id" placeholder="Create send.go ID">
+            <input type="password" id="reg-pin" placeholder="Create PIN">
+            <button onclick="register()">Save & Continue</button>
+        </div>
+
+        <div id="home-section" style="display:none;">
+            <h2>Welcome, <span id="username"></span></h2>
+            <p>Your ID: <span id="user-id"></span></p>
+            <div>
+                <input type="text" id="add-friend-name" placeholder="Enter Name">
+                <input type="text" id="add-friend-id" placeholder="Enter send.go ID">
+                <button onclick="addFriend()">Add send.go ID</button>
+            </div>
+            <div id="friends-list"></div>
+            <textarea id="message-box" placeholder="Type your message"></textarea><br>
+            <input type="file" id="file-upload">
+            <button onclick="sendMessage()">Send Message</button>
+            <div id="reply-box"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
